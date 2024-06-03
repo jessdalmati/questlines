@@ -14,3 +14,11 @@ void Questbook::addQuest(string questline_id, string quest_desc) {
 Quest Questbook::getQuest(string questline_id, int idx) {
     return questlines[questline_id].get(idx);
 }
+
+string Questbook::list() {
+    string o = "";
+    for (auto [id, ql] : questlines) {
+        o += id + "\t" + ql.getName() + "\n";
+    }
+    return o;
+}

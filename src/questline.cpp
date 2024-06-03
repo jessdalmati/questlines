@@ -17,3 +17,7 @@ void Questline::add(Quest q) {
 Quest Questline::get(int idx) {
     return quests[idx];
 }
+
+string Questline::getName() {
+    return this->name; 
+}
